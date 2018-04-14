@@ -30,6 +30,7 @@
 #if defined(PCBX7)
   #define HEADER_LINE                  0
   #define HEADER_LINE_COLUMNS
+  #define NO_HEADER_LINE
 #else
   #define HEADER_LINE                  1
   #define HEADER_LINE_COLUMNS          0,

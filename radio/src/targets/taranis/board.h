@@ -276,6 +276,7 @@ enum EnumKeys
 #elif defined(PCBXLITE)
   #define KEY_PLUS                      KEY_RIGHT
   #define KEY_MINUS                     KEY_LEFT
+  #define NO_MENU_KEY
 #else
   #define KEY_UP                        KEY_PLUS
   #define KEY_DOWN                      KEY_MINUS
