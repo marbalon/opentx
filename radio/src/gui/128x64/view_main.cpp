@@ -469,6 +469,16 @@ void menuMainView(event_t event)
   }
 
   {
+#if defined(SDCARD)
+    // Blinking 'rec' logo when recording logs
+    const pm_uchar log_icon[] PROGMEM = {
+    #include "logs.lbm"
+    };
+
+    if (isFunctionActive(FUNCTION_LOGS) && BLINK_ON_PHASE) {
+      lcdDrawBitmap(68, 1*FH+11, log_icon);
+    }
+#endif    
     // Flight Mode Name
     uint8_t mode = mixerCurrentFlightMode;
     lcdDrawSizedText(PHASE_X, PHASE_Y, g_model.flightModeData[mode].name, sizeof(g_model.flightModeData[mode].name), ZCHAR|PHASE_FLAGS);
